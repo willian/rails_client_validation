@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe RailsClientValidation::FormBuilder do
+  subject { Object.new.extend(RailsClientValidation::FormBuilder) }
+  
   describe '#jquery_validations' do
     before(:all) do
       @user = User.new
